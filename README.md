@@ -1,12 +1,12 @@
 # Comoving-stars-d3js
 
-This repository contains code used to make [d3js](https://d3js.org)-based
+This repository contains code used to make a [d3js](https://d3js.org)-based
 interactive visualization of comoving stars. A live demo can be found
 [here](http://www.smoh.space/vis/gaia-comoving-stars/).
 
 ## Usage
 
-To serve locally, start a webserver so that resources needed can be
+To serve locally, start a webserver so that the resources needed can be
 located. If you have python, you can simply do
 ```
 # python 2
