@@ -1,7 +1,7 @@
 // check if value is int
 function isInt(value) {
-  return !isNaN(value) && 
-         parseInt(Number(value)) == value && 
+  return !isNaN(value) &&
+         parseInt(Number(value)) == value &&
          !isNaN(parseInt(value, 10));
 }
 
@@ -108,8 +108,8 @@ chartCMD.append("text")
      .style("font-size", 25);
 
 // Define the div for the tooltip
-var div = d3.select("body").append("div") 
-    .attr("class", "tooltip")       
+var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
     .style("opacity", 0);
 
 var colorCycle = d3.schemeCategory10;
@@ -124,7 +124,7 @@ d3.csv("mwsc.csv", function(error, mwsc) {
     d.GLAT = +d.GLAT;
     d.d = +d.d;
     d.gX = d.d * Math.cos(d.GLAT*Math.PI/180) * Math.cos(d.GLON*Math.PI/180);
-    d.gY = d.d * Math.cos(d.GLAT*Math.PI/180) * Math.sin(d.GLON*Math.PI/180);    
+    d.gY = d.d * Math.cos(d.GLAT*Math.PI/180) * Math.sin(d.GLON*Math.PI/180);
     d.Name = d.Name.replace('_', ' ');
   });
 
@@ -142,8 +142,8 @@ d3.csv("mwsc.csv", function(error, mwsc) {
       .on("click", function(d) {
         div.style("opacity", .9);
         div.html(d.Name)
-           .style("left", (d3.event.pageX) + "px")    
-           .style("top", (d3.event.pageY - 28) + "px");  
+           .style("left", (d3.event.pageX) + "px")
+           .style("top", (d3.event.pageY - 28) + "px");
       })
       .on("mouseout", function(d) {
         div.style("opacity", 0)
@@ -162,7 +162,7 @@ d3.json("data.json", function(error, graph) {
   // Reset zoom
   d3.select("button#reset")
       .on("click", resetted);
-  
+
   function resetted() {
     chartPolar.transition()
         .duration(2000)
@@ -201,7 +201,7 @@ d3.json("data.json", function(error, graph) {
           .attr("cx", function(d) { return x(d.gj); })
           .attr("cy", function(d) { return y(d.gMag); })
           .attr("id", function(d) { return "id"+d.id; })
-  
+
   // var link = chartPolar.append("g")
   //      .attr("class", "links")
   //    .selectAll("line")
