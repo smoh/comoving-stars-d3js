@@ -1,0 +1,25 @@
+{
+  "name": "gwb-web",
+  "version": "0.0.0",
+  "authors": [
+    "Semyeong Oh <semyeong.oh@gmail.com>"
+  ],
+  "main": "index.html",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "^4.3.0",
+    "skeleton": "^2.0.4",
+    "hint.css": "hint-css#^2.4.1"
+  },
+  "resolutions": {
+    "d3": "3"
+  }
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <meta name="robots" content="noindex">
+  <title>Co-moving pairs of stars in Gaia DR1</title>
+  <!-- Skeleton -->
+  <link href="bower_components/skeleton/css/normalize.css" rel="stylesheet">
+  <link href="bower_components/skeleton/css/skeleton.css" rel="stylesheet">
+  <link rel="stylesheet" href="my.css">
+  <!-- hint.css tooltip -->
+  <link href="bower_components/hint.css/hint.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container">
+  <h2>Co-moving pairs of stars in <a href="http://www.cosmos.esa.int/web/gaia/dr1">Gaia DR1</a></h2>
+
+    <form action="">
+        <span class="hint--bottom" aria-label="Reset Zoom & Pan">
+          <button type="button" id="reset">Reset</button>
+        </span>
+        <span class="hint--bottom" aria-label="Start a tour!">
+          <button type="button" id="start">Start Tour</button>
+        </span>
+        <input type="text" id="getgroup" placeholder="Group ID">
+        <button type="button" class="button-primary" id="getgroup">Go</button>
+        <p id="message"></p>
+    </form>
+  
+  <div class="row">
+    <div class="seven columns"><div id="chart1" class="center-block"></div></div>
+    <div class="five columns">
+      <div id="chart2" class="center-block"></div>
+      <table class="u-full-width">
+        <thead>
+          <tr>
+            <th>Group</th>
+            <td id="groupid"></td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th>Size</th>
+            <td id="groupsize"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <h2>What do we see?</h2>
+    <p>
+      The interactive plot above shows the distribution of stars with a co-moving
+      neighbor in the Solar neighborhood in a cylindrical projection onto the Galactic plane.
+    </p>
+    <h3>Take a tour and interact yourself</h3>
+    <ul>
+      <li>Click start tour to take a tour of some of the connected group of co-moving pairs. Their distribution on the color-magnitude diagram will apper on the right axes.</li>
+      <li>Interact with the plot yourself! Zoom (on points) and pan to examine the distribution. On mouseover of a particular group, the stars in the group will be highlighted with a color, and their distribution on the color-magnitude diagram will appear on the right.</li>
+      <li>The blue circles mark the positions of known Milky Way star clusters. Click to see their names.</li>
+      <li>Go to a particular group by entering a group ID (integer from 0 to 99). The size of the groups is in descending order with increasing group ID, with group 0 being the largest. The stars in that group will be uniquely colored, and persist until you reload the page.</li>
+    </ul>
+    <h3>What we did</h3>
+    <p>
+      We looked for these co-moving pairs of stars using the Tycho-Gaia Astrometric Solution (TGAS) which
+      is released as a part of the Gaia first data release. <a href="http://sci.esa.int/gaia/">Gaia</a> is
+      an exciting and ambitious space mission launched in 2013 to chart distances and proper motions
+      of one billion stars in our Galaxy, the Milky Way.
+    </p>
+    <p>
+      Using the positions (including distances) and proper motions of two million stars,
+      and their uncertainties,
+      in the TGAS, we perform a <a href="https://en.wikipedia.org/wiki/Bayes_factor">marginalized likelihood ratio test</a> to pick out pairs
+      that are consistent with having <i>the same 3D velocity</i>. Of about 270,000 pairs that
+      we examine, we find ~13,000 candidate co-moving pairs. Some of these pairs are
+      connected by <i>sharing</i> a co-moving neighbor to form a <a href="https://en.wikipedia.org/wiki/Connected_component_(graph_theory)"><q>connected component.</q></a>
+      As you can see, some of the larger connected components nicely coincide with the positions of
+      known <a href="https://en.wikipedia.org/wiki/Star_cluster">star clusters</a>. An aggregate of co-moving pairs on the upper right corresponds to
+      positions of known OB associations e.g., <a href="https://en.wikipedia.org/wiki/Scorpius–Centaurus_Association">Scorpius-Centaurus Association</a>.
+    </p>
+    <p>
+      There are also many candidate co-moving pairs which are mutually exclusively linked. These are found with very wide separations upto 10 pc, our search limit. But we only show the hundred largest groups here for speed. For more details, see a <a href="https://arxiv.org/abs/1612.02440">our paper on arxiv</a>.
+    </p>
+  </div>
+  <footer>
+    <p>Posted by <a href="http://smoh.space">Semyeong Oh</a> | Last updated 2016-12-13
+      | Contact: <tt>semyeong at astro.princeton.edu</tt></p>
+  </footer>
+
+</div>
+
+<!-- load the d3.js library -->
+<script src="bower_components/d3/d3.min.js"></script>
+
+<script src="polar.js"></script>
+
+-<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', "UA-37308551-3", 'auto');
+ga('send', 'pageview');
+
+</script>
+</body>
+</html>

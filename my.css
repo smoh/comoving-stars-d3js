@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css?family=Maitree|Open+Sans');
+
+.container {
+  max-width: 1200px;
+}
+
+body p, ul>li{
+  font-family: 'Maitree', serif;
+  font-size: 2rem;
+}
+
+body > h1,h2,h3 {
+  font-family: 'Open Sans', sans-serif;
+}
+
+body a {
+  color: #0066CC;
+  text-decoration: none;
+}
+
+body a:hover {
+  color: #0066CC;
+  text-decoration: underline;
+}
+
+.line {
+    fill: none;
+    stroke: steelblue;
+    stroke-width: 1px;
+  }
+  
+  .links line {
+    stroke: #999;
+    stroke-opacity: 0.35;
+    stroke-width: .5px;
+    z-index: -100;
+  }
+  .nodes circle {
+    stroke: #fff;
+    stroke-width: 0.5px;
+  }
+  button {
+    /*position: absolute;
+    top: 20px;
+    left: 20px;*/
+  }
+  .axis line,
+  .axis circle {
+    fill: none;
+    stroke: #777;
+    stroke-dasharray: 1,4;
+  }
+  .tick {
+    font-size: 15px;
+  }
+  .axis :last-of-type circle {
+    stroke: #333;
+    stroke-dasharray: none;
+  }
+  div.tooltip { 
+    position: absolute;     
+    text-align: center;     
+    width: 100px;          
+    height: 28px;         
+    padding: 2px;       
+    color: white;
+    background: black; 
+    border: 0px;    
+    border-radius: 8px;     
+    pointer-events: none;     
+  }
+  /* Add this attribute to the element that needs a tooltip */
+  [data-tooltip] {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+  }
+  /* Hide the tooltip content by default */
+  [data-tooltip]:before,
+  [data-tooltip]:after {
+    visibility: hidden;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=0);
+    opacity: 0;
+    pointer-events: none;
+  }
+
+  /* Position tooltip above the element */
+  [data-tooltip]:before {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-bottom: 5px;
+    margin-left: -80px;
+    padding: 7px;
+    width: 160px;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    background-color: #000;
+    background-color: hsla(0, 0%, 20%, 0.9);
+    color: #fff;
+    content: attr(data-tooltip);
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.2;
+  }
+
+  /* Triangle hack to make tooltip look like a speech bubble */
+  [data-tooltip]:after {
+    position: absolute;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -5px;
+    width: 0;
+    border-top: 5px solid #000;
+    border-top: 5px solid hsla(0, 0%, 20%, 0.9);
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    content: " ";
+    font-size: 0;
+    line-height: 0;
+  }
+
+  /* Show tooltip content on hover */
+  [data-tooltip]:hover:before,
+  [data-tooltip]:hover:after {
+    visibility: visible;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=100)";
+    filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
+    opacity: 1;
+  }
+  
+
+  .ticks {
+  font: 10px sans-serif;
+}
+
+.track,
+.track-inset,
+.track-overlay {
+  stroke-linecap: round;
+}
+
+.track {
+  stroke: #000;
+  stroke-opacity: 0.3;
+  stroke-width: 10px;
+}
+
+.track-inset {
+  stroke: #ddd;
+  stroke-width: 8px;
+}
+
+.track-overlay {
+  pointer-events: stroke;
+  stroke-width: 50px;
+  cursor: crosshair;
+}
+
+.handle {
+  fill: #fff;
+  stroke: #000;
+  stroke-opacity: 0.5;
+  stroke-width: 1.25px;
+}
+
+p#message {
+  display: inline-block;
+  margin-left: 30px;
+  font-size: 14px;
+}
