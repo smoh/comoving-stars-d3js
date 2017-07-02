@@ -2,7 +2,7 @@
 
 This repository contains code used to make [d3js](https://d3js.org)-based
 interactive visualization of comoving stars. A live demo can be found
-[here](https://github.com/smoh/gaia-comoving-stars).
+[here](http://www.smoh.space/vis/gaia-comoving-stars/).
 
 ## Usage
 
