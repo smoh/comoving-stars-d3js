@@ -1,3 +1,8 @@
+/*
+ * This file is part of comoving-stars-d3js visualization which is under
+ * MIT License. See file LICENSE for full license details.
+ */
+
 // check if value is int
 function isInt(value) {
   return !isNaN(value) &&

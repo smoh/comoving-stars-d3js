@@ -1,3 +1,7 @@
+/*
+ * This file is part of comoving-stars-d3js visualization which is under
+ * MIT License. See file LICENSE for full license details.
+ */
 @import url('https://fonts.googleapis.com/css?family=Maitree|Open+Sans');
 
 .container {
@@ -28,7 +32,7 @@ body a:hover {
     stroke: steelblue;
     stroke-width: 1px;
   }
-  
+
   .links line {
     stroke: #999;
     stroke-opacity: 0.35;
@@ -57,17 +61,17 @@ body a:hover {
     stroke: #333;
     stroke-dasharray: none;
   }
-  div.tooltip { 
-    position: absolute;     
-    text-align: center;     
-    width: 100px;          
-    height: 28px;         
-    padding: 2px;       
+  div.tooltip {
+    position: absolute;
+    text-align: center;
+    width: 100px;
+    height: 28px;
+    padding: 2px;
     color: white;
-    background: black; 
-    border: 0px;    
-    border-radius: 8px;     
-    pointer-events: none;     
+    background: black;
+    border: 0px;
+    border-radius: 8px;
+    pointer-events: none;
   }
   /* Add this attribute to the element that needs a tooltip */
   [data-tooltip] {
@@ -130,7 +134,7 @@ body a:hover {
     filter: progid: DXImageTransform.Microsoft.Alpha(Opacity=100);
     opacity: 1;
   }
-  
+
 
   .ticks {
   font: 10px sans-serif;
