@@ -1,8 +1,8 @@
 # Comoving-stars-d3js
 
 This repository contains code used to make a [d3js](https://d3js.org)-based
-interactive visualization of comoving stars. A live demo can be found
-[here](http://www.smoh.space/vis/gaia-comoving-stars/).
+interactive visualization of comoving stars in Gaia DR1 ([paper](https://ui.adsabs.harvard.edu/abs/2017AJ....153..257O/abstract)).
+A live demo can be found [here](https://smoh.github.io/comoving-stars-d3js/).
 
 ## Usage
 
